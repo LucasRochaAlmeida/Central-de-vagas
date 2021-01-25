@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <main>
+
+        <form action="">
+
+            <fieldset>
+                <legend>Dados do paciente</legend>
+
+                <div>
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" name="data" required>
+                    
+                    <label for="matricula">Matrícula:</label>
+                    <input type="number" id="matricula" name="matricula" required>
+                    
+                    <label for="nome">Nome:</label>
+                    <input id="nome" name="nome" required>
+
+                    <label for="nomeDaMae">Nome da mãe:</label>
+                    <input id="nomeDaMae" name="nomeDaMae">
+                </div>
+
+                <div id="origem">
+                    <label for="guia">Guia:</label>
+                    <input type="text" id="guia" name="guia[]"/>
+                    <button style="cursor: pointer;" onclick="duplicarCampos();">+</button>
+                    <button style="cursor: pointer;" onclick="removerCampos(event);">-</button> 
+
+                    <label for="agendadoEm">Agendado em:</label>
+                    <input type="date" id="agendadoEm" name="agendadoEm" required>
+
+                    <label for="dataDoAgendamento">Data do agendamento:</label>
+                    <input type="date" id="dataDoAgendamento" name="dataDoAgendamento" required>
+
+                    <label for="local">Local:</label>
+                    <input id="local" name="local" required>
+
+                    <label for="hora">Hora:</label>
+                    <input type="time" id="hora" name="hora" required>
+
+                    <label for="conexa">CONEXA:</label>
+                    <input id="conexa" name="conexa" required>
+
+                    <label for="observacao">Observação:</label>
+                    <input id="observacao" name="observacao" required>
+                </div>
+                
+                <div id="destino">
+                </div>
+
+            </fieldset>
+
+            <div class="botoes">
+                <button class="botaoInserirCancelar" style="background-color: rgb(132, 214, 132);">Inserir</button>
+    
+                <button class="botaoInserirCancelar" type="reset" style="background-color: rgb(218, 94, 94);">Cancelar</button>
+            </div>
+
+        </form>
+
+        
+
+    </main>
+
+    <script src="../scripts/script.js">
+            
+    </script>
+</body>
+</html>
