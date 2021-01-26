@@ -1,0 +1,30 @@
+{
+  "name": "projeto-central-de-vagas",
+  "version": "1.0.0",
+  "description": "projeto inicial",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasRochaAlmeida/Central-de-vagas.git"
+  },
+  "author": "T.I. Saúde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucasRochaAlmeida/Central-de-vagas/issues"
+  },
+  "homepage": "https://github.com/LucasRochaAlmeida/Central-de-vagas#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
