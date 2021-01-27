@@ -1,19 +1,24 @@
 const express = require('express');
-/* const bodyParser = require('body-parser');
-const mysql = require('mysql2'); */
+const bodyParser = require('body-parser');
+//const mysql = require('mysql2');
 const app = express();
-/* app.use(bodyParser.urlencoded({ extended: true })) */
+
+app.use(bodyParser.urlencoded({ extended: true }))
+
+app.use(bodyParser.json())
 
 
-/* const db = mysql.createConnection({
+const db = mysql.createConnection({
         host: 'localhost',
-        user: 'root',
         port: '3306',
+        user: 'root',
         password: 'Xk2ag47HQ4luca$',
         database: 'centralDeVagas'
 });
 
-db.connect( (err)  => {//Conectando
+
+
+/* db.connect( (err)  => {//Conectando
     if(err) throw err;
     console.log('MySQL conectado...');
 });
@@ -46,3 +51,8 @@ app.post('/insere', (req, res) => {
 app.listen(5000, () => console.log('rodando'))
 
 app.get('/', (req, res) => res.send('server rodando') )
+
+app.post('/', (req, res) => {
+        console.log(req.body)
+        res.send('../pages/form.html')
+} )
