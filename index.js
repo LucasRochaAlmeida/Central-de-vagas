@@ -2,23 +2,23 @@ const express = require('express');
 const bodyParser = require('body-parser');
 //const mysql = require('mysql2');
 const app = express();
-//const path = require('path');
+const path = require('path');
 
 
 
-app.use(express.urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded({ extended: true }))
+
+app.use(express.static('public'))
 
 
-function pag(req, res){
-        return res.render('form.html')
-    }
+app.get('/', (req, res)=> {
+    return res.sendFile(path.join(__dirname, 'pages' ,'form.html'))
+})
 
-
-
-app
-.get('/', pag)
-
-//.post('/', pag)
+app.post('/', (req, res) => {
+    console.log(req.body)
+    res.sendFile(path.join(__dirname, 'pages' ,'form.html'))
+} )
 
 
 app.listen(5000)
